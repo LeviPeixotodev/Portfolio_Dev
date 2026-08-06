@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" role="img" aria-labelledby="title desc">
+  <title id="title">Monograma LP</title>
+  <desc id="desc">Placeholder de foto de perfil com as iniciais LP.</desc>
+  <rect width="500" height="560" fill="#DED8CE"/>
+  <circle cx="250" cy="280" r="166" fill="#1F1D1B"/>
+  <text x="250" y="308" fill="#F5F1EA" font-family="Georgia, serif" font-size="134" text-anchor="middle">LP</text>
+</svg>
