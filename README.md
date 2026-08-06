@@ -1,59 +1,69 @@
-# PortfolioDev
+# Portfolio Dev | Levi Peixoto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Portfolio pessoal desenvolvido em Angular para apresentar minha stack, projetos e formas de contato em uma interface simples, editorial e responsiva.
 
-## Development server
+## Sobre
 
-To start a local development server, run:
+Este projeto e um site 100% frontend, pensado para deploy estatico em plataformas como Netlify, Vercel, Cloudflare Pages ou GitHub Pages.
 
-```bash
-ng serve
-```
+A proposta visual segue uma linha mais sobria: fundo creme, tipografia forte, poucos acentos de cor, microinteracoes discretas e foco no conteudo.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologias
 
-## Code scaffolding
+- Angular 22
+- TypeScript
+- SCSS
+- Standalone Components
+- Angular Animations
+- Reactive Forms
+- Formspree
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Funcionalidades
 
-```bash
-ng generate component component-name
-```
+- Hero com apresentacao, foto, links sociais e curriculo
+- Secao de stack com chips e icones
+- Cards de projetos com decisoes tecnicas explicadas
+- Formulario de contato com validacao em tempo real
+- Envio de mensagens via Formspree
+- Animacoes de entrada e microinteracoes
+- Layout responsivo para desktop e mobile
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Como rodar localmente
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Instale as dependencias:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Inicie o servidor de desenvolvimento:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Depois acesse:
 
-## Additional Resources
+```text
+http://localhost:4200/
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Build
+
+Para gerar a versao de producao:
+
+```bash
+npm run build
+```
+
+Os arquivos finais ficam em:
+
+```text
+dist/portfolio-dev/browser
+```
+
+## Contato
+
+- Email: levipeixoto.dev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/levi-peixoto/
+- GitHub: https://github.com/LeviPeixotodev
