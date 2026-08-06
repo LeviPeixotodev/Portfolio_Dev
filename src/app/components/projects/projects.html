@@ -1,0 +1,69 @@
+<section class="projects" id="projects" aria-labelledby="projects-title">
+  <div class="projects__heading" appReveal #projectsHeadingReveal="appReveal" [@reveal]="projectsHeadingReveal.animationState">
+    <p class="projects__eyebrow">Projetos</p>
+    <h2 id="projects-title">Sistemas em foco.</h2>
+  </div>
+
+  <div class="projects__grid" appReveal #projectsGridReveal="appReveal" [@projectStagger]="projectsGridReveal.animationState">
+    <article class="project project--featured">
+      <div class="project__meta">Projeto 01 · Destaque</div>
+      <h3>Caminhão API — Rodovias</h3>
+      <p class="project__problem">Gestão de frota de caminhões, com controle de movimentação financeira e operacional.</p>
+
+      <div class="project__stack">
+        <span>Frontend</span>
+        <p><i class="devicon-angular-plain project__meta-icon" aria-hidden="true"></i>Angular, HTML5, CSS3, JavaScript</p>
+        <span>Backend</span>
+        <p><i class="devicon-java-plain project__meta-icon" aria-hidden="true"></i>Java + Spring Boot</p>
+        <span>Banco</span>
+        <p><i class="devicon-h2-plain project__meta-icon" aria-hidden="true"></i>H2, rodando localmente</p>
+      </div>
+
+      <aside class="project__decision">
+        <span>Decisão técnica</span>
+        <p>Uso de BigDecimal em vez de tipos de ponto flutuante (double/float) para todos os cálculos monetários e de saldo, evitando erros de arredondamento em operações financeiras — crítico num sistema que movimenta valores reais.</p>
+      </aside>
+
+      <footer class="project__footer">
+        <div class="project__links" aria-label="Links do projeto Caminhão API — Rodovias">
+          <a href="https://github.com/LeviPeixotodev/CaminhaoAPI_Java" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <span class="project__local">Roda localmente</span>
+        </div>
+
+        <div class="project__roadmap">
+          <span>Próximos passos</span>
+          <p>Migração para PostgreSQL e deploy em produção, com potencial de versão white-label para transportadoras.</p>
+        </div>
+      </footer>
+    </article>
+
+    <article class="project project--secondary">
+      <div class="project__meta">Projeto 02</div>
+      <h3>Clima Agora</h3>
+      <p class="project__problem">Consulta de clima de qualquer região do mundo.</p>
+
+      <div class="project__stack">
+        <span>Stack</span>
+        <p><i class="devicon-javascript-plain project__meta-icon" aria-hidden="true"></i>HTML, CSS, JavaScript puro (consumo de API) · GitHub Pages (deploy)</p>
+      </div>
+
+      <aside class="project__decision">
+        <span>Decisão técnica</span>
+        <p>Integração e normalização de dados de 3 APIs de clima diferentes numa única interface consistente, lidando com formatos de resposta distintos entre elas.</p>
+      </aside>
+
+      <footer class="project__footer">
+        <div class="project__links" aria-label="Links do projeto Clima Agora">
+          <a href="https://github.com/LeviPeixotodev/CLIMA_AGORA-TreinamentoComAPI" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://levipeixotodev.github.io/CLIMA_AGORA-TreinamentoComAPI/" target="_blank" rel="noreferrer">Ir para o Clima Agora <span aria-hidden="true">↗</span></a>
+        </div>
+      </footer>
+    </article>
+
+    <article class="project project--upcoming" aria-labelledby="upcoming-title">
+      <div class="project__meta project__badge">Em breve</div>
+      <h3 id="upcoming-title">Em breve</h3>
+      <p>Novo projeto em desenvolvimento.</p>
+    </article>
+  </div>
+</section>

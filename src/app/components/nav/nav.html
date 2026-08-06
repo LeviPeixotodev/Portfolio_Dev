@@ -1,0 +1,10 @@
+<nav class="nav" appReveal #navReveal="appReveal" [@reveal]="navReveal.animationState" aria-label="Navegação principal">
+  <a class="nav__brand" href="#top" aria-label="Início" (mouseenter)="setBrandHover(true)" (mouseleave)="setBrandHover(false)" (focus)="setBrandHover(true)" (blur)="setBrandHover(false)">Levi Peixoto</a>
+
+  <ul class="nav__links">
+    <li><a href="#about">Sobre</a></li>
+    <li><a href="#skills">Stack</a></li>
+    <li><a href="#projects">Projetos</a></li>
+    <li><a href="#contact">Contato</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,44 @@
+<section class="skills" id="skills" aria-labelledby="skills-title">
+  <div class="skills__intro" appReveal #skillsIntroReveal="appReveal" [@reveal]="skillsIntroReveal.animationState">
+    <p class="skills__eyebrow">Tecnologias</p>
+    <h2 id="skills-title">Stack de trabalho.</h2>
+  </div>
+
+  <div class="skills__groups">
+    <section class="skills__group skills__group--frontend" appReveal #frontendReveal="appReveal" [@reveal]="frontendReveal.animationState" aria-labelledby="frontend-title">
+      <h3 id="frontend-title">Frontend</h3>
+      <ul class="skills__tags" aria-label="Skills de frontend">
+        <li><i class="devicon-angular-plain skills__icon" title="Angular" aria-hidden="true"></i>Angular</li>
+        <li><i class="devicon-typescript-plain skills__icon" title="TypeScript" aria-hidden="true"></i>TypeScript</li>
+        <li><i class="devicon-html5-plain skills__icon" title="HTML" aria-hidden="true"></i>HTML</li>
+        <li><i class="devicon-sass-original skills__icon" title="SCSS" aria-hidden="true"></i>SCSS</li>
+      </ul>
+    </section>
+
+    <section class="skills__group skills__group--backend" appReveal #backendReveal="appReveal" [@reveal]="backendReveal.animationState" aria-labelledby="backend-title">
+      <h3 id="backend-title">Backend</h3>
+      <ul class="skills__tags" aria-label="Skills de backend">
+        <li><i class="devicon-java-plain skills__icon" title="Java" aria-hidden="true"></i>Java</li>
+        <li><i class="devicon-spring-original skills__icon" title="Spring Boot" aria-hidden="true"></i>Spring Boot</li>
+        <li><i class="devicon-nodejs-plain skills__icon" title="Node.js" aria-hidden="true"></i>Node.js</li>
+        <li><i class="devicon-express-original skills__icon" title="Express" aria-hidden="true"></i>Express</li>
+        <li><i class="devicon-mysql-plain skills__icon" title="MySQL" aria-hidden="true"></i>MySQL</li>
+      </ul>
+    </section>
+
+    <section class="skills__group skills__group--tools" appReveal #toolsReveal="appReveal" [@reveal]="toolsReveal.animationState" aria-labelledby="tools-title">
+      <h3 id="tools-title">Ferramentas &amp; Infra</h3>
+      <ul class="skills__tags" aria-label="Ferramentas e infraestrutura">
+        <li><i class="devicon-git-plain skills__icon" title="Git" aria-hidden="true"></i>Git</li>
+        <li><i class="devicon-github-original skills__icon" title="GitHub" aria-hidden="true"></i>GitHub</li>
+        <li><i class="devicon-gitlab-plain skills__icon" title="GitLab" aria-hidden="true"></i>GitLab</li>
+        <li><span class="skills__icon skills__icon--simple" title="GitHub Actions" style="--icon-url: url('https://cdn.simpleicons.org/githubactions/1F1D1B')" aria-hidden="true"></span>GitHub Actions</li>
+        <li><i class="devicon-linux-plain skills__icon" title="Linux" aria-hidden="true"></i>Linux</li>
+        <li><span class="skills__icon skills__icon--simple" title="Figma" style="--icon-url: url('https://cdn.simpleicons.org/figma/1F1D1B')" aria-hidden="true"></span>Figma</li>
+        <li><i class="devicon-docker-plain skills__icon" title="Docker" aria-hidden="true"></i>Docker</li>
+        <li><span class="skills__icon skills__icon--simple" title="Postman" style="--icon-url: url('https://cdn.simpleicons.org/postman/1F1D1B')" aria-hidden="true"></span>Postman</li>
+        <li><span class="skills__icon skills__icon--simple" title="Swagger" style="--icon-url: url('https://cdn.simpleicons.org/swagger/1F1D1B')" aria-hidden="true"></span>Swagger</li>
+      </ul>
+    </section>
+  </div>
+</section>

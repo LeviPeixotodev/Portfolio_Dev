@@ -1,0 +1,275 @@
+@use '../../../styles/theme' as *;
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr);
+  gap: var(--space-7);
+  padding: var(--section-space) 0;
+  border-top: 1px solid rgb(31 29 27 / 12%);
+}
+
+.contact__eyebrow {
+  margin: 0 0 var(--space-3);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.contact__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-5) 0 0;
+  color: var(--color-accent-olive);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact__availability span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-7);
+}
+
+.contact__email {
+  position: relative;
+  width: fit-content;
+  color: inherit;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  padding-bottom: 0.16em;
+  line-height: 1.16;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-decoration: none;
+  transition: color 200ms ease-out;
+}
+
+.contact__email::after,
+.contact__links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--color-accent);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 200ms ease-out;
+}
+
+.contact__email:hover,
+.contact__email:focus-visible {
+  color: var(--color-accent);
+}
+
+.contact__email:hover::after,
+.contact__email:focus-visible::after,
+.contact__links a:hover::after,
+.contact__links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.contact__links {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact__links li {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgb(31 29 27 / 16%);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+
+.contact__links li > span:first-child {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.contact__links a {
+  position: relative;
+  width: fit-content;
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact__links a span {
+  color: var(--color-accent);
+}
+
+.contact__form {
+  display: grid;
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgb(31 29 27 / 16%);
+}
+
+.contact__field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contact__field label {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact__field input,
+.contact__field textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(31 29 27 / 28%);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out;
+}
+
+.contact__field input {
+  min-height: 2.5rem;
+}
+
+.contact__field textarea {
+  min-height: 6.5rem;
+  padding: var(--space-2) 0;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.contact__field input:not(:placeholder-shown),
+.contact__field textarea:not(:placeholder-shown) {
+  border-color: var(--color-accent-petrol);
+  background: color-mix(in srgb, var(--color-accent-petrol) 14%, var(--color-canvas));
+}
+
+.contact__field input:-webkit-autofill,
+.contact__field input:-webkit-autofill:hover,
+.contact__field input:-webkit-autofill:focus,
+.contact__field input:autofill {
+  -webkit-box-shadow: 0 0 0 1000px color-mix(in srgb, var(--color-accent-petrol) 14%, var(--color-canvas)) inset;
+  -webkit-text-fill-color: var(--color-ink);
+  caret-color: var(--color-ink);
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: rgb(31 29 27 / 44%);
+  opacity: 1;
+}
+
+.contact__error,
+.contact__send-error {
+  margin: 0;
+  color: rgb(31 29 27 / 65%);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  line-height: 1.45;
+}
+
+.contact__submit {
+  justify-self: start;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  transition: background-color 180ms ease-out, color 180ms ease-out;
+}
+
+.contact__submit:hover:not(:disabled),
+.contact__submit:focus-visible:not(:disabled) {
+  background: var(--color-accent);
+  color: var(--color-canvas);
+}
+
+.contact__submit:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.contact__toast {
+  position: fixed;
+  z-index: 20;
+  right: var(--page-gutter);
+  bottom: var(--page-gutter);
+  max-width: min(22rem, calc(100vw - (var(--page-gutter) * 2)));
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-accent);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+
+.contact__placeholder {
+  color: rgb(31 29 27 / 62%);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: $breakpoint-md) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .contact__details {
+    gap: var(--space-6);
+  }
+
+  .contact__links li {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

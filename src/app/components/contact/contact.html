@@ -1,0 +1,64 @@
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact__intro" appReveal #contactIntroReveal="appReveal" [@reveal]="contactIntroReveal.animationState">
+    <p class="contact__eyebrow">Contato</p>
+    <h2 id="contact-title">Vamos conversar.</h2>
+    <p class="contact__availability"><span aria-hidden="true"></span>Disponível para oportunidades</p>
+  </div>
+
+  <div class="contact__details" appReveal #contactDetailsReveal="appReveal" [@reveal]="contactDetailsReveal.animationState">
+    <a class="contact__email" href="mailto:levipeixoto.dev@gmail.com">levipeixoto.dev@gmail.com</a>
+
+    <ul class="contact__links" aria-label="Canais de contato">
+      <li>
+        <span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/levi-peixoto/" target="_blank" rel="noreferrer">linkedin.com/in/levi-peixoto <span aria-hidden="true">↗</span></a>
+      </li>
+      <li>
+        <span>GitHub</span>
+        <a href="https://github.com/LeviPeixotodev" target="_blank" rel="noreferrer">github.com/LeviPeixotodev <span aria-hidden="true">↗</span></a>
+      </li>
+    </ul>
+
+    <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="submit()" novalidate>
+      <div class="contact__field">
+        <label for="contact-name">Nome</label>
+        <input id="contact-name" type="text" formControlName="name" autocomplete="name" placeholder="Insira seu nome" />
+        @if (hasError('name', 'required')) {
+          <p class="contact__error">Informe seu nome.</p>
+        }
+      </div>
+
+      <div class="contact__field">
+        <label for="contact-email">E-mail</label>
+        <input id="contact-email" type="email" formControlName="email" autocomplete="email" placeholder="seuemail@exemplo.com" />
+        @if (hasError('email', 'required')) {
+          <p class="contact__error">Informe seu e-mail.</p>
+        } @else if (hasError('email', 'email')) {
+          <p class="contact__error">Use um e-mail válido.</p>
+        }
+      </div>
+
+      <div class="contact__field">
+        <label for="contact-message">Mensagem</label>
+        <textarea id="contact-message" formControlName="message" rows="4" placeholder="Como posso ajudar?"></textarea>
+        @if (hasError('message', 'required')) {
+          <p class="contact__error">Escreva uma mensagem.</p>
+        } @else if (hasError('message', 'minlength')) {
+          <p class="contact__error">Escreva pelo menos 10 caracteres.</p>
+        }
+      </div>
+
+      @if (errorMessage()) {
+        <p class="contact__send-error" role="alert">{{ errorMessage() }}</p>
+      }
+
+      <button class="contact__submit" type="submit" [disabled]="sending()">
+        {{ sending() ? 'Enviando…' : 'Enviar mensagem' }}
+      </button>
+    </form>
+  </div>
+
+  @if (success()) {
+    <div class="contact__toast" role="status">Mensagem enviada. Obrigado pelo contato.</div>
+  }
+</section>

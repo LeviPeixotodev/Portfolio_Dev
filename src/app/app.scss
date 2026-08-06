@@ -1,0 +1,11 @@
+.portfolio-shell {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--content-width));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
+
+app-nav:has(.nav__brand:hover) + app-hero .hero__name,
+app-nav:has(.nav__brand:focus-visible) + app-hero .hero__name {
+  color: var(--color-accent);
+}
