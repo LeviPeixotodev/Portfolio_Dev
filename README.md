@@ -1,7 +1,12 @@
 # Portfolio Dev | Levi Peixoto
 
 Portfolio pessoal desenvolvido em Angular para apresentar minha stack, projetos e formas de contato em uma interface simples, editorial e responsiva.
-https://levipeixotodev.github.io/Portfolio_Dev/
+
+
+##[ Clique aqui para acessar o deploy da página]( https://levipeixotodev.github.io/Portfolio_Dev/)
+
+
+
 ## Sobre
 
 Este projeto e um site 100% frontend, pensado para deploy estatico em plataformas como Netlify, Vercel, Cloudflare Pages ou GitHub Pages.
