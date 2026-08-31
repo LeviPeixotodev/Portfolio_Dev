@@ -3,7 +3,7 @@
 Portfolio pessoal desenvolvido em Angular para apresentar minha stack, projetos e formas de contato em uma interface simples, editorial e responsiva.
 
 
-##[ Clique aqui para acessar o deploy da página]( https://levipeixotodev.github.io/Portfolio_Dev/)
+## [ Clique aqui para acessar o deploy da página]( https://levipeixotodev.github.io/Portfolio_Dev/)
 
 
 
